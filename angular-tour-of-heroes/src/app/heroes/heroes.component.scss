@@ -6,6 +6,7 @@
   width: 15em;
 }
 .heroes li {
+  display: flex;
   position: relative;
   cursor: pointer;
   background-color: #eee;
