@@ -4,6 +4,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductComponent } from './product.component';
 import { CommonModule } from '@angular/common';
+import { ProductService } from '../services/product.service';
 
 const routes: Routes = [
   {
@@ -11,7 +12,7 @@ const routes: Routes = [
     component: ProductComponent,
     children: [
       { path: '', component: ProductListComponent },
-      { path: 'detail', component: ProductDetailComponent }
+      { path: 'detail/:productId', component: ProductDetailComponent }
     ]
   }
 ];
@@ -19,7 +20,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [ProductComponent, ProductDetailComponent, ProductListComponent],
   imports: [RouterModule.forChild(routes), CommonModule],
-  providers: [],
+  providers: [ProductService],
   bootstrap: []
 })
 export class ProductModule {}

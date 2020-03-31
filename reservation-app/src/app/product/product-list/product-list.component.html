@@ -1,11 +1,12 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm" *ngFor="let product of products">
-      <a routerLink="/products/detail">
+    <div class="col-sm" *ngFor="let product of products; index as productId">
+      <a routerLink="/products/detail/{{ productId }}">
         <div class="card">
           <img src="http://via.placeholder.com/300x225.png" class="card-img-top" alt="">
           <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">{{ product.name }}</p>
+            <p>{{ product.description }}</p>
           </div>
         </div>
       </a>
