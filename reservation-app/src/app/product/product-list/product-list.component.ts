@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 import { products, Product } from '../../products';
 import { ProductService } from 'src/app/services/product.service';
@@ -15,6 +16,8 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     this.products = products;
-    console.log(this.productService.getProduct());
+    this.productService.getProduct().subscribe(data => {
+      console.log(data);
+    });
   }
 }
