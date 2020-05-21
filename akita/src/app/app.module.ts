@@ -1,26 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { environment } from 'src/environments/environment';
-import { CounterComponent } from './components/counter/counter.component';
-import { HttpClientModule } from '@angular/common/http';
-import { ShopComponent } from './components/shop/shop.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
-  declarations: [AppComponent, CounterComponent, ShopComponent],
+  declarations: [
+    AppComponent
+  ],
   imports: [
-    environment.production ? [] : AkitaNgDevtools,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule
+    environment.production ? [] : AkitaNgDevtools
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

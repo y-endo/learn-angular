@@ -7,7 +7,29 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:class": {
+          "skipTests": true
+        },
+        "@schematics/angular:directive": {
+          "skipTests": true
+        },
+        "@schematics/angular:guard": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
+        },
+        "@schematics/angular:module": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
         }
       },
       "root": "",
@@ -127,6 +149,7 @@
   },
   "defaultProject": "akita",
   "cli": {
-    "analytics": "216bc69c-4f6d-4ac8-af9c-6740e28b556a"
+    "analytics": "63ca3797-b4f4-495d-bb8b-5ece071d2e06",
+    "defaultCollection": "@datorama/akita"
   }
 }
