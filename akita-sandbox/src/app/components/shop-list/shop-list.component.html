@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let product of allProduct$ | async">
+    {{ product.id }} {{ product.productName }} {{ product.price }}
+  </li>
+</ul>
+<div>
+  first: {{ firstProduct$ | async }}
+</div>

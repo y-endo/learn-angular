@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "akita": {
+    "akita-sandbox": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -39,7 +39,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/akita",
+            "outputPath": "dist/akita-sandbox",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -88,18 +88,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "akita:build"
+            "browserTarget": "akita-sandbox:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "akita:build:production"
+              "browserTarget": "akita-sandbox:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "akita:build"
+            "browserTarget": "akita-sandbox:build"
           }
         },
         "test": {
@@ -136,20 +136,20 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "akita:serve"
+            "devServerTarget": "akita-sandbox:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "akita:serve:production"
+              "devServerTarget": "akita-sandbox:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "akita",
+  "defaultProject": "akita-sandbox",
   "cli": {
-    "analytics": "63ca3797-b4f4-495d-bb8b-5ece071d2e06",
+    "analytics": "026a359e-2876-430e-a221-3672dc530e85",
     "defaultCollection": "@datorama/akita"
   }
 }
