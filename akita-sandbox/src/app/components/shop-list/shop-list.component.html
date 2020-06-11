@@ -4,5 +4,5 @@
   </li>
 </ul>
 <div>
-  first: {{ firstProduct$ | async }}
+  first: {{ (firstProduct$ | async)?.productName }}
 </div>

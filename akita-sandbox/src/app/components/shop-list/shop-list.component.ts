@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
 import { getEntityType } from '@datorama/akita';
 import { ShopState, ShopQuery } from '../../state/shop';
 
